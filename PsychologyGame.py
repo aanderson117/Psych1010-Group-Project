@@ -190,15 +190,17 @@ def velimir():
 
 
 def lana():
-    print('''\nLord Lanius has been complaining about the state of his wife, Lana. He claims that she was attacked by a furry beast. 
-Since this attack, Lana has seemed strange. She cannot remember key details about Lanius, their children, or their home. 
-A key to keeping my kingdom happy is keeping my Lords happy; I need you to go out to Lord Lanius’ land and cure Lana. Be off!''')
+    print('''\nLord Lanius has been complaining about the state of his wife, Lana. He claims that she was 
+attacked by a furry beast. Since this attack, Lana has seemed strange. She cannot remember key details 
+about Lanius, their children, or their home. A key to keeping my kingdom happy is keeping my Lords happy; 
+I need you to go out to Lord Lanius’ land and cure Lana. Be off!''')
 
     print('''\nYou dismount your horse and head off the main road onto a cobbled path that leads to a grand cottage. There is no 
 mistaking this impressive home; this is Lord Lanius\’ residence. You approach the home and rap your knuckles on the hard wooden door. 
-You hear a collection of nigh-inaudible mumbles as a pair of footsteps approaches the door. The door opens, revealing Lord Lanius and his wife, Lana. 
-Lanius is well put together; his garb is stunning and of the highest quality. Lana has matted long brown hair and a confused look on her face. There 
-is an apparent swelling on the back of her head. She opens her mouth to speak, but Lanius precedes her.''')
+You hear a collection of nigh-inaudible mumbles as a pair of footsteps approaches the door. The door opens, revealing 
+Lord Lanius and his wife, Lana. Lanius is well put together; his garb is stunning and of the highest quality. Lana has 
+matted long brown hair and a confused look on her face. There is an apparent swelling on the back of her head. She opens 
+her mouth to speak, but Lanius precedes her.''')
    
     print('''\nLanius: Ah, court sorcerer! I was told I could expect your arrival. Please, enter!''')
     print('''\nLanius guides you and Lana to the study where you take three a seat.''')
@@ -208,7 +210,7 @@ is an apparent swelling on the back of her head. She opens her mouth to speak, b
     print('''\nLana points to the bump on her head you noticed earlier. She then stands up and lowers the back of her bloody shirt to reveal large 
 lacerations in the pattern of a claw. They are not quite gaping, but they appear moist; she is still lightly bleeding. The wound seems far from clean.''')
     print('''\nLana: I have no issue forming new memories, but I seem to have trouble recalling other information. I still require guidance around 
-Lanius\’ land. I don’t know what has happened, but it terrifies me to no end. Please tell me you can help me court sorcerer!''')
+Lanius’ land. I don’t know what has happened, but it terrifies me to no end. Please tell me you can help me court sorcerer!''')
     print('''\nYou: Do not fear. I have the cure for what ails you. Firstly, I will cure your injuries.
 \nYou cast a spell of cauterization that seals the wounds on her back; both safe and sterile.''')
 
@@ -256,12 +258,83 @@ for so long. Begone sorcerer. I have no need of you for now.''')
 
 
 def geralt():
+    print('''\nKing: One of my oldest and greatest warriors has been consistently terrorized 
+since his retirement. We fought side by side in our youths. I did not give up on him then, and 
+I am not going to now. I need you to go to him and cure him. Do not fail me.''')
+    print('''\nYou make a turbulent trip up Mount Helmir until you reach Geralt’s cottage. 
+He is outside his cottage chopping wood; smoke billows from his cottage’s chimney. It has 
+grown quite brisk at such high altitude. Geralt spots you and slowly approaches you before 
+his face gleams with relief. He wraps his arms around you and embraces you. Tears stream 
+down his cheek.''')
+    print('''\nGeralt: You have no idea how glad I am to see you sorcerer. My life has 
+been a waking nightmare. I don’t know what to do. I have fought many battles by myself, 
+but this is one I cannot seem to win.''')
+    print('''\nYou: Be at ease, old dragonslayer. I will do everything in my power to 
+save you. Please describe what has been happening to you.''')
+    print('''\nGeralt: I feel fine when I am keeping occupied, but whenever my hands 
+grow idle, my heart begins to race. I begin to sweat, and my muscles start to tense. 
+I recall old battles I have had. Both against beast and man. I feel as if I am there, 
+reliving every strike I dealt and every strike dealt to me. I can’t keep living like 
+this; my mind grows weary from this constant assault. Someone must have placed a hex 
+on me.''')
+    print('''\nYou: I think I understand what is going on here, and I have what I need to cure you.''')
+    print('\nWhat will you use to cure him?')
+    print('1. Spell of Memory Erasure')
+    print('2. Spell of Serotonin Reuptake Inhibition')
+    print('3. Charm of Hex-Warding')
+    print('4. The Holy Bible')
+    player_choice=input('Enter number for your choice: ')
+    while not player_choice.isnumeric() or (int(player_choice) < 1 or int(player_choice) > 4):
+                player_choice = input('Please enter a number for one of the choices listed: ')
+    if int(player_choice) == 1:
+        print('''\nYou cast a spell of memory erasure on Geralt. You bid him farewell, and he retreats into his 
+    cottage to rest. You head back to the castle and return to your quarters. After a few days, you are summoned 
+    to the King’s court.''')
+        print('''\nKing: I am not sure what you have done. My old friend does not complain of his same symptoms, so you have 
+    cured him in that aspect. However, he does not seem to remember any of the memories we shared together, or 
+    any of the battles he served in for that matter. You have done what I have asked. I am greatly saddened 
+    by the results. Begone from my sight.''')
+        patients_not_treated.remove('Geralt the Old Dragonslayer')
+        add_strike()
+    elif int(player_choice) == 2:
+        print('''\nYou cast a spell of serotonin reuptake inhibition. The effects on Geralt will not be immediate, 
+    you know, but you are certain this will alleviate some of his symptoms. You return to the castle and your 
+    quarters therein. After a few days, you are summoned by the King.''')
+        print('''\nKing: I am not sure what you have done sorcerer, but the worst of my friend’s symptoms have 
+    been taken care of. Thank you for this great deed. Geralt served this nation valiantly in battle and I 
+    would not have let him waste away. I am overjoyed with this result. I have no more need of you for now. 
+    Begone sorcerer; until I am in need of you next.''')
+        patients_not_treated.remove('Geralt the Old Dragonslayer')
+    elif int(player_choice) == 3:
+        print('''\nAdhering to Geralt’s advice, you give him a charm of Hex-Warding. You are sure that it 
+    will rid him of his symptoms. You return to the castle and your chambers therein. After a few days you 
+    are summoned to the King’s court.''')     
+        print('''\nKing: I am not sure what you have done sorcerer, but the results have been astoundingly 
+    bad. My old friend is spiraling into madness and whatever you have done has only made it worse. Words 
+    cannot begin to describe the pain you have caused me. If you fail me like this again, I will see you 
+    drawn and quartered. I cannot bear to look at you. Get out of my sight.''')
+        patients_not_treated.remove('Geralt the Old Dragonslayer')
+        add_strike()
+    elif int(player_choice) == 4:
+        print('''\nYou say a prayer for Geralt and bid him farewell. You return to the castle and your quarters 
+    therein. After a few days you are summoned to the King’s court.''')     
+        print('''\nKing: I am not sure what you have done sorcerer, but the results could have been better. 
+    Geralt’s general state is better than what it was, but he is still severely impaired. He is getting 
+    sleep at the very least, so for that I am thankful. This was not your best work. Begone from my sight 
+    sorcerer.''')
+        patients_not_treated.remove('Geralt the Old Dragonslayer')
+        add_strike()
+    print('\nDisorder reveal: Geralt the Old Dragonslayer was suffering from PTSD.')
+    print('\nSolution: The spell of serotonin reuptake inhibition was the correct answer. This is a common treatment for PTSD patients as it treats some of their negative symptoms like anxiety and depression. SSRIs.')
+
+    
     return
 
 
 
 
 def cateline():
+    
     return
 
 

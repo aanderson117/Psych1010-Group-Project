@@ -334,6 +334,75 @@ on me.''')
 
 
 def cateline():
+    print('''\nKing: Some of the visitors to my kingdom have been complaining that our largest inn is 
+suffering from an uncomfortable and uninviting atmosphere. Head to the Bear Claw inn and talk with Cateline, 
+the head innkeeper. See what you can find out and get that inn up and running again. We cannot be losing revenue 
+because no one wants to stay in our village when they visit. Be off and do not return until you have 
+remedied the situation.''')
+    print('''\nYou head to the bustling metropolis that is the center of the kingdom. Among several taverns 
+and shops, you spot the Bear Claw inn. You dismount your steed and hitch it to a nearby fence. You enter the 
+inn and call out Cateline’s name. Several moments pass with no response. Those in the common area pay you 
+little mind. You feel uninvited. You hear some rustling towards the back of the inn before a door closes. 
+You investigate and call out Cateline’s name again. This time there is a mumbled response on the other side 
+of the door.''')
+    print('''\nCateline: You may enter, but please tell me you are alone.''')
+    print('''\nYou assure her that you are alone and enter what seems to be her office.''')
+    print('''\nYou: The King has sent me here among complaints that your inn is suffering from an uninviting 
+atmosphere. What do you think this can be attributed to?''')
+    print('''\nCateline: I know what is causing it. I have become a poor hostess as of late. I had an awkward 
+exchange with a group of guests a few weeks back. Ever since then, any time I must talk to someone that I do 
+not know, I am overcome with dread, I begin to sweat, I start tripping over words, and my face becomes flush 
+with shame. I do not know what the cause of this is, but I am sick of it. How am I supposed to be a good hostess 
+when I can hardly face my guests?''')
+    print('''\nYou: That does seem rather problematic. I believe I know what the issue is, and I will do my best 
+    to solve it.''')
+    print('\nWhat do you choose?')
+    print('1. Magical Book of Self-Help')
+    print('2. The Holy Bible')
+    print('3. Salve of Memory Repression')
+    print('4. Charm of Extroversion')
+    player_choice=input('Enter number for your choice: ')
+    while not player_choice.isnumeric() or (int(player_choice) < 1 or int(player_choice) > 4):
+                player_choice = input('Please enter a number for one of the choices listed: ')
+    if int(player_choice) == 1:
+        print('''\nYou give Cateline the Magical Book of Self-Help and return to your study at the castle. 
+    After a few days, you are summoned by the King to review your progress.''')
+        print('''\nKing: The Bear Claw is doing a lot better since your intervention. I do not know what 
+    you have done, but it seems to have paid off. Guests feel much more welcome at the inn than they did 
+    prior. I am not sure if this is a long-term fix, but you have done what I have asked of you. Good work. 
+    Begone from my sight.''')
+        patients_not_treated.remove('Cateline the Innkeeper')
+        
+    elif int(player_choice) == 2:
+        print('''\nYou say a prayer for Cateline and return to your study. After a few days, the King summons 
+    you to review your progress''')
+        print('''\nKing: I am not sure what you did, but it has had no effect. Guests do not feel comfortable 
+    at the inn. Cateline seems to be the source of this. You have failed me. Keep this up and I will not be so 
+    forgiving. Begone from my sight.''')
+        patients_not_treated.remove('Cateline the Innkeeper')
+        add_strike()
+    elif int(player_choice) == 3:
+        print('''\nYou give Cateline a salve of memory repression to erase the awkward exchange with the guests 
+    that she had a few weeks ago. You deem this to be the cause of her symptoms. You return to your study after 
+    bidding her farewell. After a few days, you are summoned to the King.''')     
+        print('''\nKing: The Bear Claw is doing a lot better since your intervention. I do not know what you 
+    have done, but it seems to have paid off. Guests feel much more welcome at the inn than they did prior. I 
+    am not sure if this is a long-term fix, but you have done what I have asked of you. Good work. Begone from 
+    my sight.''')
+        patients_not_treated.remove('Cateline the Innkeeper')
+        add_strike()
+    elif int(player_choice) == 4:
+        print('''\nYou give Cateline a charm of extroversion and bid her farewell. You hope that this will help 
+    with her symptoms. You return to your study at the castle. After a few days, you are summoned by the King.''')     
+        print('''\nKing: I am not sure what you did, but it has had no effect. Guests do not feel comfortable 
+    at the inn. Cateline seems to be the source of this. You have failed me. Keep this up and I will not be so 
+    forgiving. Begone from my sight.''')
+        patients_not_treated.remove('Cateline the Innkeeper')
+        add_strike()
+    print('\nDisorder reveal: Cateline had an acute case of Social Anxiety Disorder caused by awkward exchanges with guests.')
+    print('''\nSolution: Provide her a self-care regimen (breathing, mindfulness, gratitude, exercises) that 
+would reduce the symptoms of her anxiety. Another solution was to erase the negative memories that led to her social anxiety.''')
+
     
     return
 

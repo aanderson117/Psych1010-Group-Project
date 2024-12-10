@@ -190,6 +190,66 @@ def velimir():
 
 
 def lana():
+    print('''\nLord Lanius has been complaining about the state of his wife, Lana. He claims that she was attacked by a furry beast. 
+Since this attack, Lana has seemed strange. She cannot remember key details about Lanius, their children, or their home. 
+A key to keeping my kingdom happy is keeping my Lords happy; I need you to go out to Lord Lanius’ land and cure Lana. Be off!''')
+
+    print('''\nYou dismount your horse and head off the main road onto a cobbled path that leads to a grand cottage. There is no 
+mistaking this impressive home; this is Lord Lanius\’ residence. You approach the home and rap your knuckles on the hard wooden door. 
+You hear a collection of nigh-inaudible mumbles as a pair of footsteps approaches the door. The door opens, revealing Lord Lanius and his wife, Lana. 
+Lanius is well put together; his garb is stunning and of the highest quality. Lana has matted long brown hair and a confused look on her face. There 
+is an apparent swelling on the back of her head. She opens her mouth to speak, but Lanius precedes her.''')
+   
+    print('''\nLanius: Ah, court sorcerer! I was told I could expect your arrival. Please, enter!''')
+    print('''\nLanius guides you and Lana to the study where you take three a seat.''')
+    print('''\nYou: hank you for your hospitality, Lord. Lana, I would like you to recount the attack by the hands of the beast.''')
+    print('''\nLana gives Lanius a worried glance. Lanius gestures with his hand, indicating she should tell her story.''')
+    print('''\nLana: I cannot seem to recall much these days. My attack least of all. The only things I have to remember it by are my injuries.''')
+    print('''\nLana points to the bump on her head you noticed earlier. She then stands up and lowers the back of her bloody shirt to reveal large 
+lacerations in the pattern of a claw. They are not quite gaping, but they appear moist; she is still lightly bleeding. The wound seems far from clean.''')
+    print('''\nLana: I have no issue forming new memories, but I seem to have trouble recalling other information. I still require guidance around 
+Lanius\’ land. I don’t know what has happened, but it terrifies me to no end. Please tell me you can help me court sorcerer!''')
+    print('''\nYou: Do not fear. I have the cure for what ails you. Firstly, I will cure your injuries.
+\nYou cast a spell of cauterization that seals the wounds on her back; both safe and sterile.''')
+
+    print('What will you use?\n')
+    print('1. Snake Oil')
+    print('2. Potion of Hippocampian Restoration')
+    print('3. A shard of pure cold summoned from the deepest depths of the void (a gel icepack from Walgreens)')
+    player_choice=input('Enter number for your choice: ')
+    while not player_choice.isnumeric() or (int(player_choice) < 1 or int(player_choice) > 3):
+                player_choice = input('Please enter a number for one of the choices listed: ')
+    if int(player_choice) == 1:
+        print('''\nYou: Here. This should cure your memory. Make sure to drink every last drop within the salve.''')
+        print('''\nThe couple thanks you for your assistance and sees you out the front door. You return to the 
+King’s castle and after a few days you are summoned to the court to hear about your progress.''')
+        print('''\nKing: Absolutely nothing has changed! I am not sure what you did, but Lanius is furious. 
+My rule over this land grows weaker because of your failings! I can only put up with your incompetence 
+for so long. Begone sorcerer. I have no need of you for now.''')
+        patients_not_treated.remove('Lana Lupin')
+        add_strike()
+    elif int(player_choice) == 2:
+        print('''\nYou: Here. This should cure your memory. Make sure to drink every last drop within the salve.''')
+        print('''\nThe couple thanks you for your assistance and sees you out the front door. You return to the 
+King’s castle and after a few days you are summoned to the court to hear about your progress.''')
+        print('''\nKing: Excellent work sorcerer. Lana’s wounds are healed, and her memory has returned to normal. 
+Lanius has been singing your praises since her curing. Lana now remembers the beast that attacked her and where 
+it went. I have tasked my men to take care of the beast. In other news, my rule over this land has been solidified 
+due to your work. Well done. I have no need of you for now. Return to your study.''')
+        patients_not_treated.remove('Lana Lupin')
+    elif int(player_choice) == 3:
+        print('''\nYou: Here. This should reduce the swelling of your head. Press this shard to the injury on your 
+    head. I am afraid there is nothing I can do about your memory.''')
+        print('''\nThe couple thanks you for your assistance and sees you out the front door. You return to the 
+King’s castle and after a few days you are summoned to the court to hear about your progress.''')     
+        print('''\nKing: Absolutely nothing has changed! I am not sure what you did, but Lanius is furious. 
+My rule over this land grows weaker because of your failings! I can only put up with your incompetence 
+for so long. Begone sorcerer. I have no need of you for now.''')
+        patients_not_treated.remove('Lana Lupin')
+        add_strike()
+    print('\nDisorder reveal: Lana was suffering from a case of retrograde amnesia.')
+    print('\nSolution: The potion of Hippocampian restoration was the correct solution. It repaired damage to the hippocampus, restoring her memories.')
+
     return
 
 
